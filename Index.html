@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function mySum() {
+            var val1 = parseFloat(document.getElementById("val1").value); // Convert to number
+            var val2 = parseFloat(document.getElementById("val2").value);
+            var result = val1 + val2; 
+            document.getElementById("result").innerHTML = result;
+        }
+        function mySubtract() {
+            var val1 = parseFloat(document.getElementById("val1").value);
+            var val2 = parseFloat(document.getElementById("val2").value);
+            var result = val1 - val2; 
+            document.getElementById("result").innerHTML = result;
+        }
+        function myMultiply() {
+            var val1 = parseFloat(document.getElementById("val1").value);
+            var val2 = parseFloat(document.getElementById("val2").value);
+            var result = val1 * val2; 
+            document.getElementById("result").innerHTML = result;
+        }
+        function myDivide() {
+            var val1 = parseFloat(document.getElementById("val1").value);
+            var val2 = parseFloat(document.getElementById("val2").value);
+            if (val2 === 0) {
+                document.getElementById("result").innerHTML = "Error: Division by zero!";
+            } else {
+                var result = val1 / val2; 
+                document.getElementById("result").innerHTML = result;
+            }
+        }
+    </script>
+    <h1>Very Very Simple Calculator</h1>
+    <form>
+        Value 1: <input type="text" id="val1"/><br/>
+        Value 2: <input type="text" id="val2"/><br/>
+        Result: <span id="result"></span><br/><br/>
+        <input type="button" value="Sum" onclick="mySum()" />
+        <input type="button" value="Subtract" onclick="mySubtract()" />
+        <input type="button" value="Multiply" onclick="myMultiply()" />
+        <input type="button" value="Divide" onclick="myDivide()" />
+    </form>
+</body>
+</html>
